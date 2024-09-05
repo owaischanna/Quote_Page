@@ -1,0 +1,279 @@
+
+body {
+  background-color: rgb(251, 251, 251); 
+  margin: 0; 
+  font-family: Arial, sans-serif; 
+}
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: white;
+  padding-left: 85%;
+}
+
+.home-link,
+.get-quote-button {
+  display: inline-block; /* Display as inline-block to keep them on the same line */
+  margin-right: 10px; /* Space between the link and button */
+  text-decoration: none; /* Remove underline from the link */
+  font-size: 16px; /* Adjust the font size */
+  font-weight: bold; /* Bold text for better visibility */
+  vertical-align: middle; /* Align vertically in the middle */
+}
+
+.get-quote-button {
+  background-color: rgb(52, 147, 178); /* Set button color */
+  color: white; /* Set text color to white */
+  border: none; /* Remove default border */
+  border-radius: 20px; /* Rounded corners */
+  padding: 10px 20px; /* Padding for the button */
+  cursor: pointer; /* Change cursor on hover */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.get-quote-button:hover {
+  background-color: darkblue; /* Change button color on hover */
+}
+
+.container {
+  display: flex; /* Use Flexbox for alignment */
+  justify-content: flex-end; /* Align items to the right */
+  align-items: center; /* Vertically center items */
+  padding: 10px; /* Padding around the container */
+}
+
+/* Image Section Styling */
+.image-section {
+  flex: 1;
+  padding: 20px;
+  margin-left: 70px; /* Change margin-right to margin-left */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  order: 0; /* Moves image section to the left */
+}
+
+/* Image Styling */
+.image-section img {
+  max-width: 60%;
+  height: 1000px; /* Keep the increased height */
+  margin-left: 70px; /* Change margin-right to margin-left */
+  display: block;
+  border-radius: 10px;
+  object-fit: cover;
+  object-position: center;
+  overflow: hidden;
+}
+
+
+/* Content Layout */
+.content {
+  display: flex;
+  flex-direction: row; /* Keep row layout to place form on the left and image on the right */
+  justify-content: space-between;
+  padding: 2rem;
+  align-items: flex-start; /* Align items to the top */
+}
+
+
+
+/* Quote Form Styling */
+.quote-form {
+  flex: 1;
+  max-width: 850px;
+  margin: 0 auto; /* Center the form horizontally */
+  display:grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns layout */
+  grid-gap: 1rem; /* Space between the fields */
+  align-items: start; /* Align items to the top */
+  order: 1; /* Ensure the form stays on the left side */
+  padding: 1rem; /* Add some padding around the form */
+  margin-right: 100px;
+}
+
+.quote-form h2 {
+  grid-column: span 2; /* Make the heading span both columns */
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #002fff;
+  font-size: 40px;
+}
+/* Form Fields Layout */
+.form-group {
+  display: contents; /* Allows grid children to be direct children of the grid container */
+}
+
+
+
+/* Input and Select Styling */
+.form-group input,
+.form-group select {
+  width: 100%; /* Full width inside grid cells */
+  padding:0.5rem ;
+  border: 1px solid rgb(52, 147, 178);
+  color: #333;
+  border-radius: 10px;
+  background-color: #e6f7ff; /* Very light blue background color */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  font-size: 1.3rem; /* Ensure uniform font size */
+  margin-bottom: 1rem; /* Add spacing below each field */
+}
+
+.radio-options {
+  grid-column: span 2; /* Make radio option fields span across two columns */
+  padding: 0.5rem 0; /* Add some padding for spacing */
+  display: flex; /* Use Flexbox for layout */
+  align-items: center; /* Center align radio buttons */
+  gap: 10px; /* Spacing between radio buttons and labels */
+}
+
+.radio-options input[type="radio"] {
+  margin: 0 0.5rem 0 0; /* Add some margin to the radio buttons */
+}
+/* Error message styling */
+/* Error Messages CSS */
+.error-message {
+  color: red;
+  font-size: 0.875em; /* Smaller font size */
+  margin-top: 5px; /* Space between the error message and the input field */
+  margin-bottom: 10px; /* Space between the error message and the next element */
+}
+
+/* Input Fields with Error */
+input.error, select.error {
+  border-color: red; /* Highlight input with error */
+  background-color: #ffe6e6; /* Light red background for error fields */
+}
+
+
+
+/* Button Styling */
+button[type="submit"] {
+  grid-column: span 2; /* Button spans two columns */
+  background-color: #002fff;
+  color: white;
+  padding: 1rem;
+  font-size: 20px;
+  font-weight: bold;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  border: none;
+  cursor: pointer;
+  margin-top: 1rem;
+  margin-left: 7%;
+  margin-right: 130px;
+}
+
+.legal-notice {
+  line-height: 1.6; /* Control line spacing for readability */
+  margin: 1rem auto; /* Center-align with margin on top and bottom */
+  color: #555;
+  width: 900%; /* Adjust the width to fit in the container */
+  max-width: 600px; /* Prevent the paragraph from being too wide */
+  text-align: justify; /* Justify text for a neat paragraph look */
+}
+
+.legal-notice a {
+  color: #00aaff;
+  text-decoration: none;
+  margin-right: 5px; /* Slight margin for spacing */
+}
+
+.legal-notice a:hover {
+  text-decoration: underline; /* Add hover effect for links */
+}
+
+.privacy-notice {
+  margin-left: 10%;
+  font-size: 1rem; /* Slightly larger font size for the privacy notice */
+  margin-bottom: 0.9rem; /* Add some space after the paragraph */
+}
+
+.legal-text {
+  margin-left: 10%;
+  font-size: 0.75rem; /* Smaller font size for legal text */
+  margin-top: 1rem; /* Add some space before the legal text */
+}
+
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column; /* Stack header items vertically */
+    align-items: center; /* Center-align items */
+    padding-left: 1rem; /* Adjust padding */
+  }
+
+
+  .home-link, .get-quote-button {
+    margin: 0.5rem 10; /* Space between links and buttons */
+  }
+
+  .container {
+    flex-direction: column; /* Stack container items vertically */
+    align-items: center; /* Center-align items */
+  }
+
+  .image-section {
+    margin-left: 0; /* Remove margin on small screens */
+    order: 1; /* Place image section below content */
+    padding: 10px; /* Adjust padding */
+  }
+
+  .image-section img {
+    max-width: 90%; /* Ensure image fits within container */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: 0; /* Remove margin on small screens */
+  }
+
+  .content {
+    flex-direction: column; /* Stack form and image vertically */
+    padding: 1rem; /* Adjust padding */
+  }
+  button[type="submit"] {
+    padding: 0.5rem; /* Smaller padding for mobile */
+    font-size: 0.975rem; /* Smaller font size for mobile */
+    width: 80%; /* Full width on mobile screens */
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
+  .quote-form {
+    grid-template-columns: 1fr; /* Single column layout */
+  }
+
+  .quote-form input, .quote-form select {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+
+  .legal-notice {
+    width: 300%; /* Full width on small screens */
+    max-width: none; /* Remove max-width constraint */
+  }
+}
+
+/* Tablet Styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .header {
+    padding-left: 1rem; /* Adjust padding */
+  }
+
+  .image-section {
+    margin-left: 40px; /* Adjust margin */
+  }
+
+  .quote-form {
+    grid-template-columns: repeat(2, 1fr); /* Two columns layout */
+  }
+
+  .quote-form input, .quote-form select {
+    font-size: 1.2rem; /* Adjust font size for tablets */
+  }
+
+  .legal-notice {
+    width: 230%; /* Full width on tablets */
+    max-width: none; /* Adjust max-width for tablets */
+  }
+}
